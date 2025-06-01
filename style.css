@@ -194,30 +194,30 @@ main {
         gap: 1.75rem;
     }
 
-    .primeira-secao {
+    .primeira-seção {
+        grid-column: 1 / 3;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.75rem;
+    }
+
+    .primeira-seção picture {
         grid-column: 1 / 3;
     }
-    
+
+    .primeira-seção img{
+        margin: 0;
+    }
+
+    .primeira-seção h1{
+        font-size: 3.5rem;
+    }
+    .segunda-seção h2{
+        font-size: 2.5rem;
+    }
 
     header > button {
         display: none;
     }
-
-    header .desktop {
-
-        display: flex;
-        gap: 2.5rem;
-    }
-
-    header .desktop a {
-        font-size: 0.9375rem;
-        line-height: 1.625rem;
-        text-decoration: none;
-        color: var(--gunmetal);
-    }
-
-    header .desktop a:hover{
-        color: var(--vermillion);
-    }
-
-}
+   }
