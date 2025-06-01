@@ -1,18 +1,18 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-     font-family: "Inter", sans-serif;
-     -webkit-font-smoothing: antialiased;
+    font-family: "inter",sans-serif;
 }
 
 :root {
-    --almost-white: #fff0fa;
-    --dark-blue: #08001a;
-    --gunmetal: #5e607a;
-    --vermillion: #f15051;
-    --yellow: #e9aa52;
-    --silver: #c5c6ce;
+    --almost-white: #FFFDFA;
+    --dark-blue: #00001A;
+    --gunmetal: #5E607A;
+    --vermillion: #F15D51;
+    --yellow: #E9AA52;
+    --silver: #C5C6CE; 
+     
 }
 
 body {
@@ -20,7 +20,7 @@ body {
     background-color: var(--almost-white);
 }
 
-body.escurecer::before{
+body.escurecer::before {
     content: "";
     position: fixed;
     height: 100vh;
@@ -30,12 +30,13 @@ body.escurecer::before{
     left: 0;
 }
 
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2rem;
-
+    
     max-width: 1110px;
     margin-inline: auto;
 }
@@ -57,7 +58,7 @@ header nav.mobile {
     z-index: 999;
 
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
     padding: 1.5rem;
     gap: 1.5rem;
 
@@ -88,30 +89,30 @@ main {
     margin-inline: auto;
 }
 
-.primeira-secao {
-    margin-bottom: 4rem;    
+.primeira-seção {
+    margin-bottom: 4rem;
 }
 
-.primeira-secao img {
+.primeira-seção img {
     width: 100%;
     margin-bottom: 1.5rem;
 }
 
-.primeira-secao h1 {
+.primeira-seção h1 {
     font-size: 2.5rem;
     line-height: 100%;
     color: var(--dark-blue);
     margin-bottom: 1rem;
 }
 
-.primeira-secao p {
+.primeira-seção p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
     color: var(--gunmetal);
     margin-bottom: 1.5rem;
 }
 
-.primeira-secao button {
+.primeira-seção button {
     padding: 0.75rem 2rem;
     background-color: var(--vermillion);
     border: none;
@@ -123,26 +124,26 @@ main {
     line-height: 1.5rem;
 }
 
-.segunda-secao {
+.segunda-seção {
     background-color: var(--dark-blue);
     margin-bottom: 4rem;
     padding: 1.5rem 1.1rem;
 }
 
-.margio-border-padding {
+.margin-border-padding{
     border-bottom: 1px solid var(--gunmetal);
     margin-bottom: 1.75rem;
-    padding-bottom: 1.75rem;
+    padding-bottom: 2.2rem;
 }
 
-.segunda-secao h2 {
+.segunda-seção h2 {
     color: var(--yellow);
     font-size: 2rem;
     line-height: 100%;
     margin-bottom: 2.2rem;
 }
 
-.segunda-secao h3 {
+.segunda-seção h3 {
     color: var(--almost-white);
     font-size: 1.25rem;
     line-height: 1.5rem;
@@ -150,48 +151,77 @@ main {
     margin-bottom: 0.5rem;
 }
 
-.segunda-secao p {
-    color: var(--almost-white);
+.segunda-seção p {
+    color: var(--silver);
     font-size: 0.9375rem;
-    line-height: 1.635rem;
+    line-height: 1.625rem;
+
 }
 
-.terceira-secao  > div {
+.terceira-seção > div { 
     display: flex;
     align-items: center;
     gap: 1.5rem;
     margin-bottom: 2rem;
 }
-
-.terceira-secao img {
+.terceira-seção img {
     max-width: 6.25rem;
 }
 
-.terceira-secao strong {
+.terceira-seção strong {
     color: var(--silver);
     font-size: 2rem;
     line-height: 100%;
 }
 
-.terceira-secao h2 {
+.terceira-seção h2 {
     color: var(--dark-blue);
     font-size: 1.125rem;
     font-weight: 800;
     line-height: 1.5rem;
     margin-block: 0.6rem;
 }
+.terceira-seção a{
+    text-decoration: none;
 
-.terceira-secao p {
+}
+
+.terceira-seção p {
     font-size: 0.9375rem;
     line-height: 1.625rem;
     color: var(--gunmetal);
 }
 
+
 @media(min-width: 1110px) {
+    
+
+    header > button {
+        display: none;
+    }
+
+    header .desktop {
+
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    header .desktop a {
+        font-size: 0.9375rem;
+        line-height: 1.625rem;
+        text-decoration: none;
+        color: var(--gunmetal);
+    }
+
+    header .desktop a:hover{
+        color: var(--vermillion);
+    }
+
     main {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 1.75rem;
+
     }
 
     .primeira-seção {
@@ -213,11 +243,23 @@ main {
     .primeira-seção h1{
         font-size: 3.5rem;
     }
+
+    .primeira-seção button:hover {
+        background-color: var(--dark-blue);
+        cursor: pointer;
+
+    }
+
     .segunda-seção h2{
         font-size: 2.5rem;
     }
 
-    header > button {
-        display: none;
+    .terceira-seção{
+        display: flex;
+        grid-column: 1 / 4;
     }
-   }
+
+    .terceira-seção h2:hover{
+        color: var(--vermillion);
+    }
+}
